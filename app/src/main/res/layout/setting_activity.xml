@@ -14,7 +14,7 @@
     </FrameLayout>
 
 
-    <star.liuwen.com.cash_books.View.DampView
+    <star.jiuji.qianbao.view.DampView
         overScrollMode="never"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -198,5 +198,5 @@
                     android:textSize="@dimen/txt_17"/>
             </RelativeLayout>
         </LinearLayout>
-    </star.liuwen.com.cash_books.View.DampView>
+    </star.jiuji.qianbao.view.DampView>
 </android.support.v4.widget.DrawerLayout>

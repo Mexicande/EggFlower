@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/window_background"
+    >
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/head_toolbar"
+             android:id="@+id/toolbar"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/toolbar"
+        android:id="@+id/recyler_View1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

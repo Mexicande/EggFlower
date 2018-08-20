@@ -12,7 +12,7 @@
         android:layout_marginLeft="10dp"
         android:padding="5dp">
 
-        <star.liuwen.com.cash_books.View.CircleImageView
+        <star.jiuji.qianbao.view.CircleImageView
             android:id="@+id/item_comm_image"
             android:layout_width="35dp"
             android:layout_height="35dp"

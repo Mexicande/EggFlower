@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/item_logo"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="屌丝贷款"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_name"
+            android:layout_marginTop="5dp"
+            android:text="屌丝贷款"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_money"
+            android:layout_marginTop="5dp"
+            android:text="利率： "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_rate_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/item_rate"
+            android:layout_below="@id/item_money"
+            android:layout_toRightOf="@id/item_rate"
+            android:text="0.033%"
+            android:textColor="@color/theme_color" />
+
+
+        <TextView
+            android:id="@+id/item_person_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_rate"
+            android:layout_marginTop="5dp"
+            android:text="132641"
+            android:textColor="@color/theme_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_rate"
+            android:layout_marginTop="5dp"
+            android:layout_alignBaseline="@id/item_person_number"
+            android:layout_toRightOf="@id/item_person_number"
+            android:text="人申请•"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_fastest_time_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_rate"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/item_person"
+            android:text="3分钟"
+            android:textColor="@color/theme_color"
+            android:layout_alignBaseline="@id/item_person"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_fastest_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_rate"
+            android:layout_marginTop="5dp"
+            android:text="放款"
+            android:layout_toRightOf="@id/item_fastest_time_number"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/item_btn_apply"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/btn_apply_for"
+            android:gravity="center"
+            android:text="申请"
+            android:textSize="14sp"
+            android:elevation="2dp"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:id="@+id/item_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/item_name"
+            android:background="@drawable/btn_apply_for"
+            android:text="新上线"
+            android:textSize="12sp"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <me.majiajie.pagerbottomtabstrip.PageNavigationView
+        android:id="@+id/tab"
+        app:elevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tab_background"
+        android:layout_alignParentBottom="true"
+        />
+    <star.jiuji.qianbao.armour.adapter.NoTouchViewPager
+        android:id="@+id/viewPager"
+        android:layout_above="@id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </star.jiuji.qianbao.armour.adapter.NoTouchViewPager>
+</RelativeLayout>

@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="5dp"
-        android:text="创建你的第一步账单吧"
+        android:text="点击下方的记账，创建你的第一步账单吧"
         android:textColor="@color/text_color_99"
         android:textSize="@dimen/txt_17"/>
 

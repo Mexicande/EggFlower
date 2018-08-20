@@ -31,7 +31,7 @@
             android:visibility="gone"
             tools:visibility="visible"/>
 
-        <star.liuwen.com.cash_books.widget.IndexView
+        <star.jiuji.qianbao.widget.IndexView
             android:id="@+id/choice_indexView"
             android:layout_width="40dp"
             android:layout_height="match_parent"

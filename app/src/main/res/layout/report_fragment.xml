@@ -37,7 +37,7 @@
                 android:text="我的存款"
                 android:textColor="@color/blue"/>
 
-            <TextView
+         <!--   <TextView
                 android:id="@+id/reports_head_qushi"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
@@ -45,7 +45,7 @@
                 android:background="@drawable/btn_lineblue_right_shape"
                 android:gravity="center"
                 android:text="我的趋势"
-                android:textColor="@color/blue"/>
+                android:textColor="@color/blue"/>-->
         </LinearLayout>
     </RelativeLayout>
 

@@ -4,16 +4,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <star.liuwen.com.cash_books.View.tab.BottomTabBar
+    <star.jiuji.qianbao.view.tab.BottomTabBar
         android:id="@+id/tb"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:backgroundColor="@color/white"
         app:textColor="@color/text_color_66"
         app:textSelectColor="@color/blue">
-    </star.liuwen.com.cash_books.View.tab.BottomTabBar>
+    </star.jiuji.qianbao.view.tab.BottomTabBar>
 
-    <LinearLayout
+   <!-- <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="76.0dip"
         android:layout_alignParentBottom="true"
@@ -27,5 +27,5 @@
             android:layout_height="70dp"
             android:onClick="onClickPublish"
             android:src="@mipmap/welcome4_jiyibi"/>
-    </LinearLayout>
+    </LinearLayout>-->
 </RelativeLayout>

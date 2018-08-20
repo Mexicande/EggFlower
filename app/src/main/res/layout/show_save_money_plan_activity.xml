@@ -8,7 +8,7 @@
     <include layout="@layout/common_toolbar"/>
 
 
-    <star.liuwen.com.cash_books.View.DampView
+    <star.jiuji.qianbao.view.DampView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/titleBar">
@@ -79,7 +79,7 @@
                         android:text="已完成"
                         android:textSize="@dimen/textSize_14"/>
 
-                    <star.liuwen.com.cash_books.View.NumberAnimTextView
+                    <star.jiuji.qianbao.view.NumberAnimTextView
                         android:id="@+id/show_money_precent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
                         android:textSize="@dimen/textSize_14"/>
 
 
-                    <star.liuwen.com.cash_books.View.NumberAnimTextView
+                    <star.jiuji.qianbao.view.NumberAnimTextView
                         android:id="@+id/show_money_plan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
                         android:progressDrawable="@drawable/seek_bar_progress_bg"
                         android:thumb="@color/blue"/>
 
-                    <star.liuwen.com.cash_books.View.NumberAnimTextView
+                    <star.jiuji.qianbao.view.NumberAnimTextView
                         android:id="@+id/show_money_finish_percent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
                 android:layout_marginTop="2dp">
             </android.support.v7.widget.RecyclerView>
         </LinearLayout>
-    </star.liuwen.com.cash_books.View.DampView>
+    </star.jiuji.qianbao.view.DampView>
 
     <ImageView
         android:layout_width="50dp"

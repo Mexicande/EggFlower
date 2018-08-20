@@ -8,7 +8,7 @@
     <include layout="@layout/common_toolbar"/>
 
 
-    <star.liuwen.com.cash_books.View.DampView
+    <star.jiuji.qianbao.view.DampView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -237,5 +237,5 @@
                     android:textColor="@color/text_color_99"/>
             </RelativeLayout>
         </LinearLayout>
-    </star.liuwen.com.cash_books.View.DampView>
+    </star.jiuji.qianbao.view.DampView>
 </LinearLayout>

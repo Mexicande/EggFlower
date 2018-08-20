@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/perfect_title"
+        android:textColor="@drawable/text_color"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="信  用  卡:"
+            android:textColor="@color/text_setting"
+            android:textSize="16sp" />
+
+        <star.jiuji.qianbao.armour.flowlayout.TagFlowLayout
+            android:id="@+id/id_flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            app:max_select="1"
+            app:tag_gravity="left">
+
+        </star.jiuji.qianbao.armour.flowlayout.TagFlowLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="名下房产:"
+            android:textColor="@color/text_setting"
+            android:textSize="16sp" />
+
+        <star.jiuji.qianbao.armour.flowlayout.TagFlowLayout
+            android:id="@+id/house_flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            app:max_select="1"
+            app:tag_gravity="left"></star.jiuji.qianbao.armour.flowlayout.TagFlowLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="名下汽车:"
+            android:textColor="@color/text_setting"
+            android:textSize="16sp" />
+
+        <star.jiuji.qianbao.armour.flowlayout.TagFlowLayout
+            android:id="@+id/car_flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            app:max_select="1"
+            app:tag_gravity="left">
+
+        </star.jiuji.qianbao.armour.flowlayout.TagFlowLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="您的职业:"
+            android:textColor="@color/text_setting"
+            android:textSize="16sp" />
+
+        <star.jiuji.qianbao.armour.flowlayout.TagFlowLayout
+            android:id="@+id/occupation_flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            app:max_select="1"
+            app:tag_gravity="left">
+
+        </star.jiuji.qianbao.armour.flowlayout.TagFlowLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="true"
+            android:text="@string/insurance"
+            android:textColor="@color/text_setting"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:theme="@style/CheckTheme" />
+        <!-- <TextView
+             android:textStyle="bold"
+             android:textSize="13sp"
+             android:textColor="@color/colorPrimary"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/insurance"/>-->
+    </LinearLayout>
+
+    <!-- <Button
+         android:layout_marginTop="30dp"
+         android:layout_marginLeft="40dp"
+         android:layout_marginRight="40dp"
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:text="立即申请"
+         android:textSize="17sp"
+         android:textColor="@color/white"
+         android:background="@drawable/button_sure"
+         />-->
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_selector"
+        android:text="立即申请"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</LinearLayout>
