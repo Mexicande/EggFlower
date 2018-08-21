@@ -137,7 +137,7 @@
                 android:background="@color/gay" />
         </RelativeLayout>
 
-        <star.jiuji.qianbao.armour.view.SlideView
+        <star.jiuji.egg_flower.armour.view.SlideView
             android:id="@+id/slideview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

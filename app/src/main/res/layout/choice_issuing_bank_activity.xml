@@ -31,7 +31,7 @@
             android:visibility="gone"
             tools:visibility="visible"/>
 
-        <star.jiuji.qianbao.widget.IndexView
+        <star.jiuji.egg_flower.widget.IndexView
             android:id="@+id/choice_indexView"
             android:layout_width="40dp"
             android:layout_height="match_parent"

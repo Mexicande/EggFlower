@@ -14,7 +14,7 @@
     </FrameLayout>
 
 
-    <star.jiuji.qianbao.view.DampView
+    <star.jiuji.egg_flower.view.DampView
         overScrollMode="never"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_marginTop="15dp"
                 android:background="@color/white">
 
-                <star.jiuji.qianbao.view.CircleImageView
+                <star.jiuji.egg_flower.view.CircleImageView
                     android:id="@+id/f_my_touxiang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -356,5 +356,5 @@
                     android:textSize="@dimen/txt_16" />
             </RelativeLayout>
         </LinearLayout>
-    </star.jiuji.qianbao.view.DampView>
+    </star.jiuji.egg_flower.view.DampView>
 </android.support.v4.widget.DrawerLayout>

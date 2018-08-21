@@ -25,7 +25,7 @@
                 android:textColor="@color/text_color_66"/>
         </RelativeLayout>
 
-        <star.jiuji.qianbao.view.PieChart.PieChart
+        <star.jiuji.egg_flower.view.PieChart.PieChart
             android:id="@+id/piechart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

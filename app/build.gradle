@@ -5,7 +5,7 @@ apply plugin: 'walle'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "star.jiuji.qianbao"
+        applicationId "star.jiuji.egg_flower"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
@@ -82,8 +82,8 @@ greendao {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
-    compile project(path: ':searchbox')
-    compile project(path: ':pager-bottom-tab-strip')
+    implementation project(path: ':searchbox')
+    implementation project(path: ':pager-bottom-tab-strip')
 
     //noinspection GradleCompatible
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'

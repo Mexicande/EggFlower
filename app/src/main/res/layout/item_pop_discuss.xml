@@ -11,7 +11,7 @@
         android:padding="8dp">
 
 
-        <star.jiuji.qianbao.view.CircleImageView
+        <star.jiuji.egg_flower.view.CircleImageView
             android:id="@+id/item_rd_image"
             android:layout_width="28dp"
             android:layout_height="28dp"

@@ -41,7 +41,7 @@
             android:textColor="@color/blue"/>
     </LinearLayout>
 
-    <star.jiuji.qianbao.view.WheelView
+    <star.jiuji.egg_flower.view.WheelView
         android:id="@+id/wheel"
         android:layout_width="match_parent"
         android:layout_height="180dp"/>

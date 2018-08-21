@@ -7,7 +7,7 @@
     <include layout="@layout/common_toolbar"/>
 
 
-    <star.jiuji.qianbao.view.DampView
+    <star.jiuji.egg_flower.view.DampView
         overScrollMode="never"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -172,5 +172,5 @@
                 android:layout_height="0.2dp"
                 android:background="@color/text_color_bg"/>
         </LinearLayout>
-    </star.jiuji.qianbao.view.DampView>
+    </star.jiuji.egg_flower.view.DampView>
 </LinearLayout>

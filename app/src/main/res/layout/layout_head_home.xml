@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="12月收入"/>
 
-            <star.jiuji.qianbao.view.NumberAnimTextView
+            <star.jiuji.egg_flower.view.NumberAnimTextView
                 android:id="@+id/home_shouru_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                 android:textSize="@dimen/textSize_18"/>
         </LinearLayout>
 
-        <star.jiuji.qianbao.view.WaveLoadingView
+        <star.jiuji.egg_flower.view.WaveLoadingView
             android:id="@+id/f_h_image"
             android:layout_width="55dp"
             android:layout_height="55dp"
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:text="12月支出"/>
 
-            <star.jiuji.qianbao.view.NumberAnimTextView
+            <star.jiuji.egg_flower.view.NumberAnimTextView
                 android:id="@+id/home_zhichu_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:elevation="0.1dp"
+    android:orientation="vertical"
     android:layout_height="wrap_content">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:background="@color/theme_color"
+        android:background="@color/colorPrimary"
         android:layout_height="?android:attr/actionBarSize">
         <TextView
             android:id="@+id/title"
@@ -15,6 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:text="@string/app_name"
             android:textSize="20sp"/>
     </android.support.v7.widget.Toolbar>
-</android.support.design.widget.AppBarLayout>
+</LinearLayout>

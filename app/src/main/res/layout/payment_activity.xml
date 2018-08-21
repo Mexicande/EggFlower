@@ -14,7 +14,7 @@
         android:layout_height="200dp"
         android:background="@color/blue">
 
-        <star.jiuji.qianbao.view.NumberAnimTextView
+        <star.jiuji.egg_flower.view.NumberAnimTextView
             android:id="@+id/pay_txt_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

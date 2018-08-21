@@ -76,7 +76,7 @@
                 android:textColor="#666"
                 android:textSize="14sp"
                 android:visibility="gone"/>
-            <star.jiuji.qianbao.armour.update.NumberProgressBarberProgressBar
+            <star.jiuji.egg_flower.armour.update.NumberProgressBarberProgressBar
                 android:id="@+id/npb"
                 style="@style/UpdateAppNumberProgressBar_Red"
                 android:paddingBottom="10dp"

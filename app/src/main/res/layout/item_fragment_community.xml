@@ -12,7 +12,7 @@
         android:layout_marginLeft="10dp"
         android:padding="5dp">
 
-        <star.jiuji.qianbao.view.CircleImageView
+        <star.jiuji.egg_flower.view.CircleImageView
             android:id="@+id/item_comm_image"
             android:layout_width="35dp"
             android:layout_height="35dp"

@@ -21,7 +21,7 @@
             android:textColor="@android:color/white"
             android:textSize="18dp"/>
 
-        <star.jiuji.qianbao.graphicLock.GraphicLockView
+        <star.jiuji.egg_flower.graphicLock.GraphicLockView
             android:id="@+id/agl_gl_lock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
