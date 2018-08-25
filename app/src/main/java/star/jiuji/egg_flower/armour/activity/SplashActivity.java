@@ -39,13 +39,12 @@ public class SplashActivity extends AppCompatActivity {
 
         mHandler.sendEmptyMessageDelayed(3
                 , 1000);
-
-     /*   boolean open = SPUtil.getBoolean(SplashActivity.this, "open", false);
+        boolean open = SPUtil.getBoolean(SplashActivity.this, "open", false);
         if (!open) {
             setUrl();
         } else {
             mHandler.sendEmptyMessageDelayed(3, 1000);
-        }*/
+        }
     }
 
     private void setUrl() {

@@ -15,16 +15,20 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
-
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import star.jiuji.egg_flower.R;
 import star.jiuji.egg_flower.armour.service.DownAPKService;
 import star.jiuji.egg_flower.armour.utils.StatusBarUtil;
 import star.jiuji.egg_flower.armour.utils.ToastUtils;
 
+/**
+ * @author yanshihao
+ */
 public class HtmlActivity extends AppCompatActivity {
 
 
@@ -32,12 +36,17 @@ public class HtmlActivity extends AppCompatActivity {
     ProgressBar bar;
     @BindView(R.id.webView)
     WebView webView;
+    @BindView(R.id.title)
+    TextView mTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_html);
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.theme_color),90);
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary), 90);
         ButterKnife.bind(this);
+        String title = getIntent().getStringExtra("title");
+        mTitle.setText(title);
         CheckInternet();
 
     }
@@ -126,6 +135,7 @@ public class HtmlActivity extends AppCompatActivity {
             });
         }
     }
+
     public boolean parseScheme(String url) {
         if (url.contains("platformapi/startapp")) {
             try {
@@ -150,7 +160,7 @@ public class HtmlActivity extends AppCompatActivity {
                 intent.setComponent(null);
                 startActivity(intent);
             } catch (Exception e) {
-                ToastUtils.showToast( "请安装最新版腾讯QQ");
+                ToastUtils.showToast("请安装最新版腾讯QQ");
             }
             return true;
         } else if (url.contains("tmast://appdetails?")) {
@@ -189,5 +199,10 @@ public class HtmlActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
         webView.destroy();
+    }
+
+    @OnClick(R.id.back)
+    public void onViewClicked() {
+        finish();
     }
 }

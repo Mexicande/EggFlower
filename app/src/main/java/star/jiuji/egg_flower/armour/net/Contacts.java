@@ -7,7 +7,7 @@ package star.jiuji.egg_flower.armour.net;
 public interface Contacts {
     String LEAN_KEY="1Xractc2sikvNt5m6r9GP7sK";
     String LEAN_ID="9zeHS4F8GAHi97Fkg0p80FYV-gzGzoHsz";
-    String UMENG_KEY="5b1a296bb27b0a1c6d000021";
+    String UMENG_KEY="5b4c10c7f43e482a77000294";
 
     String PHONE="phone";
 

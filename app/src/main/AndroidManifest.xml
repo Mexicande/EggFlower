@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="star.jiuji.egg_flower">
 
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
@@ -22,10 +22,9 @@
     <!-- 改变WiFi多播状态 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!--震动权限-->
+    <!-- 震动权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
 
     <application
         android:name=".base.App"
@@ -36,21 +35,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon, android:theme,android:name">
-        <activity android:name=".armour.activity.SplashActivity"
+        <activity
+            android:name=".armour.activity.SplashActivity"
             android:theme="@style/welcomeTheme">
-
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
+
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
         <activity android:name=".armour.activity.MainActivity" />
         <activity android:name=".armour.activity.GuideActivity" />
         <activity android:name=".armour.activity.LoginActivity" />
         <activity android:name=".armour.activity.HtmlActivity" />
-        <service android:name=".armour.service.DownAPKService"/>
-        <service android:name=".armour.update.DownloadService"/>
+
+        <service android:name=".armour.service.DownAPKService" />
+        <service android:name=".armour.update.DownloadService" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -62,162 +62,160 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-
-
-        <activity android:name="star.jiuji.egg_flower.activity.LoadingActivity" />
-        <!--日历-->
+        <activity android:name=".activity.LoadingActivity" />
+        <!-- 日历 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.CalendarActivity"
+            android:name=".activity.CalendarActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--支出和收入-->
+        <!-- 支出和收入 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.IncomeAndCostActivity"
+            android:name=".activity.IncomeAndCostActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name="star.jiuji.egg_flower.MainActivity"
+            android:name=".MainActivity"
             android:launchMode="singleTask" />
 
-        <!--存钱页面-->
+        <!-- 存钱页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.SaveMoneyActivity"
+            android:name=".activity.SaveMoneyActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--存钱计划-->
+        <!-- 存钱计划 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.PlanSaveMoneyActivity"
+            android:name=".activity.PlanSaveMoneyActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--整理消费账单-->
+        <!-- 整理消费账单 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.FixXiaofeiCheckActivity"
+            android:name=".activity.FixXiaofeiCheckActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--选择发卡行-->
+        <!-- 选择发卡行 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.ChoiceIssuingBankActivity"
+            android:name=".activity.ChoiceIssuingBankActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--提醒记账页面-->
+        <!-- 提醒记账页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.RemindActivity"
+            android:name=".activity.RemindActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--新建存钱计划-->
+        <!-- 新建存钱计划 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.newSaveMoneyPlanActivity"
+            android:name=".activity.newSaveMoneyPlanActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--主题皮肤-->
+        <!-- 主题皮肤 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.ChangeSkinActivity"
+            android:name=".activity.ChangeSkinActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--用户界面-->
+        <!-- 用户界面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.UserInfoActivity"
+            android:name=".activity.UserInfoActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--关于界面-->
+        <!-- 关于界面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.AboutMeActivity"
+            android:name=".activity.AboutMeActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--设置页面-->
+        <!-- 设置页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.SettingActivity"
+            android:name=".activity.SettingActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--密码锁页面-->
+        <!-- 密码锁页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.CodedLockActivity"
+            android:name=".activity.CodedLockActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--货币页面-->
+        <!-- 货币页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.HuoBiActivity"
+            android:name=".activity.HuoBiActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--货币设置页面-->
+        <!-- 货币设置页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.HuoBiSettingActivity"
+            android:name=".activity.HuoBiSettingActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--登陆界面-->
+        <!-- 登陆界面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.Login1Activity"
+            android:name=".activity.Login1Activity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--设置九宫格解锁页面-->
+        <!-- 设置九宫格解锁页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.GraphicLockActivity"
-            android:launchMode="standard"
-            android:screenOrientation="portrait" />
-
-        <!--登陆的时候弹出九宫格解锁页面-->
-        <activity
-            android:name="star.jiuji.egg_flower.activity.LoginLockActivity"
-            android:launchMode="standard"
-            android:screenOrientation="portrait" />
-        <!--展示存钱的页面-->
-        <activity
-            android:name="star.jiuji.egg_flower.activity.ShowSaveMoneyPlanActivity"
-            android:launchMode="standard"
-            android:screenOrientation="portrait" />
-        <!--存一笔-->
-        <activity
-            android:name="star.jiuji.egg_flower.activity.SaveAPenActivity"
-            android:launchMode="standard"
-            android:screenOrientation="portrait" />
-        <!--存钱平台-->
-        <activity
-            android:name="star.jiuji.egg_flower.activity.SavePlatformActivity"
+            android:name=".activity.GraphicLockActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
 
-        <!--通用的修改页面-->
+        <!-- 登陆的时候弹出九宫格解锁页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.UpdateCommonKeyBoardActivity"
+            android:name=".activity.LoginLockActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <!-- 展示存钱的页面 -->
+        <activity
+            android:name=".activity.ShowSaveMoneyPlanActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <!-- 存一笔 -->
+        <activity
+            android:name=".activity.SaveAPenActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <!-- 存钱平台 -->
+        <activity
+            android:name=".activity.SavePlatformActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
 
-        <!--钱包显示页面-->
+        <!-- 通用的修改页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.PayShowActivity"
+            android:name=".activity.UpdateCommonKeyBoardActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--设置账户页面-->
+
+        <!-- 钱包显示页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.PaySettingsActivity"
+            android:name=".activity.PayShowActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--增加支出或者收入的页面-->
+        <!-- 设置账户页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.EditIncomeAndCostActivity"
+            android:name=".activity.PaySettingsActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--添加选择账户类型页面-->
+        <!-- 增加支出或者收入的页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.ChoiceAccountTypeActivity"
+            android:name=".activity.EditIncomeAndCostActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--新建选择账户-->
+        <!-- 添加选择账户类型页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.newAddAccountActivity"
+            android:name=".activity.ChoiceAccountTypeActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--转账页面-->
+        <!-- 新建选择账户 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.TransferActivity"
+            android:name=".activity.newAddAccountActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--消费或者支出详细页面-->
+        <!-- 转账页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.PayShowDetailActivity"
+            android:name=".activity.TransferActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--分享页面需要的-->
+        <!-- 消费或者支出详细页面 -->
+        <activity
+            android:name=".activity.PayShowDetailActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <!-- 分享页面需要的 -->
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:screenOrientation="portrait"
@@ -232,30 +230,37 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <!--搜索查询页面-->
+        <!-- 搜索查询页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.SearchResultActivity"
+            android:name=".activity.SearchResultActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--选择颜色页面-->
+        <!-- 选择颜色页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.ChoiceAccountColorActivity"
+            android:name=".activity.ChoiceAccountColorActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--增加预算页面-->
+        <!-- 增加预算页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.BudgetActivity"
+            android:name=".activity.BudgetActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--发表朋友圈页面-->
+        <!-- 发表朋友圈页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.AddCommunityActivity"
+            android:name=".activity.AddCommunityActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
-        <!--webView页面-->
+        <!-- webView页面 -->
         <activity
-            android:name="star.jiuji.egg_flower.activity.WebViewActivity"
+            android:name=".activity.WebViewActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
+        <activity android:name=".armour.activity.WelfareActivity" />
+        <activity android:name=".armour.activity.BankActivity"></activity>
+        <activity android:name=".armour.activity.AboutActivity"/>
+        <activity android:name=".armour.activity.EmptyActivity"/>
+        <activity android:name=".armour.activity.FeedbackActivity"/>
+        <activity android:name=".armour.activity.SettingActivity"/>
     </application>
+
 </manifest>

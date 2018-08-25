@@ -70,5 +70,15 @@ public class ApiService {
 
 
     }
+    public static void apply(String productId, String token) {
+        OkGo.<String>post(Api.APPLY)
+                .params("id", productId)
+                .params("token", token)
+                .execute(new StringCallback() {
+                    @Override
+                    public void onSuccess(Response<String> response) {
+                    }
+                });
+    }
 
 }

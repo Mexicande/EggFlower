@@ -25,6 +25,8 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,13 +34,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import star.jiuji.egg_flower.R;
+import star.jiuji.egg_flower.armour.entity.LoginEvent;
 import star.jiuji.egg_flower.armour.fragment.VerificationFragment;
 import star.jiuji.egg_flower.armour.net.Api;
 import star.jiuji.egg_flower.armour.net.ApiService;
 import star.jiuji.egg_flower.armour.net.Contacts;
 import star.jiuji.egg_flower.armour.net.OnRequestDataListener;
 import star.jiuji.egg_flower.armour.net.VerListener;
-import star.jiuji.egg_flower.armour.utils.AppUtils;
 import star.jiuji.egg_flower.armour.utils.CaptchaTimeCount;
 import star.jiuji.egg_flower.armour.utils.CommonUtil;
 import star.jiuji.egg_flower.armour.utils.SPUtil;
@@ -89,16 +91,18 @@ public class LoginActivity extends AppCompatActivity implements VerListener {
     private int isolduser;
     private String mHtml;
     private String mId;
+    private int type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        StatusBarUtil.setColor(this, ContextCompat.getColor(this, R.color.theme_color), 40);
+        StatusBarUtil.setColor(this, ContextCompat.getColor(this, R.color.colorPrimary), 40);
         ButterKnife.bind(this);
         captchaTimeCount = new CaptchaTimeCount(Contacts.Times.MILLIS_IN_TOTAL, Contacts.Times.COUNT_DOWN_INTERVAL, btCode, this);
         mHtml = getIntent().getStringExtra("html");
-        mId = getIntent().getStringExtra("id");
+        mId = getIntent().getStringExtra("title");
+        type = getIntent().getIntExtra("type", 0);
         initView();
 
     }
@@ -119,9 +123,15 @@ public class LoginActivity extends AppCompatActivity implements VerListener {
                 } else {
                     SPUtil.putString(LoginActivity.this, Contacts.PHONE, phone);
                     if (isolduser == 0) {   //老用户
-                        apply(mId, SPUtil.getString(LoginActivity.this, "token"));
-                        startActivity(new Intent(LoginActivity.this, HtmlActivity.class).putExtra("html", mHtml));
-                        finish();
+                        if (type == 1) {
+                            finish();
+
+                        } else {
+                            startActivity(new Intent(LoginActivity.this, HtmlActivity.class).putExtra("html", mHtml).putExtra("title", mId));
+                            finish();
+                        }
+                        EventBus.getDefault().post(new LoginEvent(phone));
+
                     } else {
                         loginPhoneR2.setVisibility(View.GONE);
                         layoutName.setVisibility(View.VISIBLE);
@@ -161,9 +171,13 @@ public class LoginActivity extends AppCompatActivity implements VerListener {
                         SPUtil.putString(LoginActivity.this, Contacts.PHONE, phone);
                         SPUtil.putString(LoginActivity.this, Contacts.TOKEN, token);
                         if (isolduser == 0) {
-                            apply(mId, token);
-                            startActivity(new Intent(LoginActivity.this, HtmlActivity.class).putExtra("html", mHtml));
-                            finish();
+                            if (type == 1) {
+                                finish();
+                            } else {
+                                startActivity(new Intent(LoginActivity.this, HtmlActivity.class).putExtra("html", mHtml).putExtra("title", mId));
+                                finish();
+                            }
+                            EventBus.getDefault().post(new LoginEvent(phone));
                         } else {
                             layoutName.setVisibility(View.VISIBLE);
                             slideview.setVisibility(View.GONE);
@@ -374,7 +388,7 @@ public class LoginActivity extends AppCompatActivity implements VerListener {
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(Response<String> response) {
-                        Log.e("apply", "onSuccess: "+response.body() );
+                        Log.e("apply", "onSuccess: " + response.body());
                     }
                 });
     }

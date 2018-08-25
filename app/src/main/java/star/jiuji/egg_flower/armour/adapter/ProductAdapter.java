@@ -5,13 +5,9 @@ import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
@@ -19,8 +15,6 @@ import java.util.List;
 
 import star.jiuji.egg_flower.R;
 import star.jiuji.egg_flower.armour.entity.ProductEntity;
-import star.jiuji.egg_flower.armour.utils.GlideCircleTransform;
-import star.jiuji.egg_flower.fragment.HomeFragment;
 
 /**
  * - @Author:  闫世豪
@@ -35,13 +29,13 @@ public class ProductAdapter extends BaseQuickAdapter<ProductEntity, BaseViewHold
 
     @Override
     protected void convert(BaseViewHolder helper, ProductEntity item) {
-        helper.setVisible(R.id.item_product_arrow,true);
+        helper.setVisible(R.id.item_product_arrow, true);
         String maximumAmount = item.getMaximum_amount();
         if (maximumAmount.length() > 4) {
             String substring = maximumAmount.substring(0, maximumAmount.length() - 4);
             maximumAmount = substring + "万";
-        }else {
-            maximumAmount=item.getMaximum_amount();
+        } else {
+            maximumAmount = item.getMaximum_amount();
         }
 
         int interestAlgorithm = item.getInterest_algorithm();
@@ -58,15 +52,14 @@ public class ProductAdapter extends BaseQuickAdapter<ProductEntity, BaseViewHold
 
         List<ProductEntity.LabelsBean> labels = item.getLabels();
 
-        for(int i=0;i<labels.size();i++){
+        for (int i = 0; i < labels.size(); i++) {
             ProductEntity.LabelsBean labelsBean = item.getLabels().get(i);
             addView(linearLayout, labelsBean.getName(), labelsBean.getFont());
-            if(i==2){
+            if (i == 2) {
                 break;
             }
         }
     }
-
 
 
     private void addView(LinearLayout linearLayout, String name, String color) {
@@ -80,7 +73,7 @@ public class ProductAdapter extends BaseQuickAdapter<ProductEntity, BaseViewHold
             textView.setTextColor(Color.parseColor(color));
             textView.setTextSize(11);
             textView.setText(name);
-            textView.setPadding(10,2,10,2);
+            textView.setPadding(10, 2, 10, 2);
             layoutParams.leftMargin = 5;
             layoutParams.rightMargin = 5;
             textView.setLayoutParams(layoutParams);

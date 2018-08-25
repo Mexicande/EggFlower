@@ -11,6 +11,9 @@ import cn.bingoogolapple.bgabanner.BGABanner;
 import star.jiuji.egg_flower.R;
 import star.jiuji.egg_flower.armour.utils.SharedPreferencesUtil;
 
+/**
+ * @author yanshihao
+ */
 public class GuideActivity extends AppCompatActivity {
     private BGABanner mBackgroundBanner;
 
@@ -22,9 +25,11 @@ public class GuideActivity extends AppCompatActivity {
         setListener();
         processLogic();
     }
+
     private void initView() {
         mBackgroundBanner = (BGABanner) findViewById(R.id.banner_guide_background);
     }
+
     private void setListener() {
         /**
          * 设置进入按钮和跳过按钮控件资源 id 及其点击事件
@@ -35,24 +40,27 @@ public class GuideActivity extends AppCompatActivity {
         mBackgroundBanner.setEnterSkipViewIdAndDelegate(R.id.btn_guide_enter, R.id.tv_guide_skip, new BGABanner.GuideDelegate() {
             @Override
             public void onClickEnterOrSkip() {
-                startActivity(new Intent(GuideActivity.this,MainActivity.class));
+                startActivity(new Intent(GuideActivity.this, MainActivity.class));
                 SharedPreferencesUtil.putBoolean(GuideActivity.this, SharedPreferencesUtil.FIRST_OPEN, false);
                 finish();
             }
         });
     }
+
     private void processLogic() {
         // 设置数据源
         mBackgroundBanner.setData(null,
                 ImageView.ScaleType.FIT_XY,
-                R.mipmap.lod_01, R.mipmap.lod_02,R.mipmap.lod_03);
+                R.mipmap.lod_01, R.mipmap.lod_02, R.mipmap.lod_03);
 
     }
+
     @Override
     public void onResume() {
         super.onResume();
         MobclickAgent.onResume(this);
     }
+
     @Override
     public void onPause() {
         super.onPause();

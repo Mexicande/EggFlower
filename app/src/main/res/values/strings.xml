@@ -167,4 +167,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_feedback">请输入你的问题, 工作人员会尽快联系并恢复您的问题（限150字以内）</string>
+
 </resources>

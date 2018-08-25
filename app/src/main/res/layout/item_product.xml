@@ -85,8 +85,8 @@
         android:id="@+id/item_product_arrow"
         android:layout_marginRight="10dp"
         android:layout_gravity="center_vertical"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:src="@mipmap/iv_arrow_right"
         />
 </LinearLayout>

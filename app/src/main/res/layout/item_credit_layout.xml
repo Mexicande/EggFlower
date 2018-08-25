@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="10dp">
+    <!--上面的属性去掉阴影-->
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/credit_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/logo" />
+
+    <TextView
+        android:id="@+id/credit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/credit_logo"
+        android:text="title"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/credit_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/credit_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/credit_logo"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/credit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/credit_tag"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/credit_logo"
+        android:text="title"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/credit_more"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_arrow_gray" />
+
+</RelativeLayout>
